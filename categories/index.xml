@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on My Home</title>
-    <link>http://minhduc2803.github.io/categories/</link>
+    <link>https://minhduc2803.github.io/categories/</link>
     <description>Recent content in Categories on My Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-vi</language>
     <copyright>@ MinhDuc VNG Fresher 2020</copyright>
     
-	<atom:link href="http://minhduc2803.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://minhduc2803.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
