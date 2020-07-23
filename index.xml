@@ -6,10 +6,20 @@
     <description>Recent content on Minh Duc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-vi</language>
-    <copyright>@ MinhDuc VNG Fresher 2020</copyright>
+    <copyright>@ VNG Fresher 2020</copyright>
+    <lastBuildDate>Wed, 22 Jul 2020 22:31:45 +0700</lastBuildDate>
     
 	<atom:link href="https://minhduc2803.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bạn đã suy nghĩ kỹ chưa ?</title>
+      <link>https://minhduc2803.github.io/thinink-fast-and-slow/</link>
+      <pubDate>Wed, 22 Jul 2020 22:31:45 +0700</pubDate>
+      
+      <guid>https://minhduc2803.github.io/thinink-fast-and-slow/</guid>
+      <description>Chuyện coca Hãy tưởng tượng bạn đang đi xem phim với bạn bè tại một rạp chiếu phim. Vé đã mua xong và nhân viên hỏi bạn có muốn mua thêm bắp nước gì không. Ở đây có coca với 2 size khác nhau: - Ly nhỏ: 25k Nhưng chỉ cần thêm 5k thôi, bạn sẽ mua được: - Ly lớn (lớn gấp đôi ly nhỏ): 30k Bạn sẽ chọn size nào ?</description>
+    </item>
     
     <item>
       <title>My First Post</title>
@@ -17,7 +27,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://minhduc2803.github.io/my-first-post/</guid>
-      <description>#Introduction
+      <description>##Introduction
 This is a introduction</description>
     </item>
     
