@@ -21,24 +21,5 @@
       <description>Chuyện coca Hãy tưởng tượng bạn đang đi xem phim với bạn bè tại một rạp chiếu phim. Vé đã mua xong và nhân viên hỏi bạn có muốn mua thêm bắp nước gì không. Ở đây có coca với 2 size khác nhau: - Ly nhỏ: 25k Nhưng chỉ cần thêm 5k thôi, bạn sẽ mua được: - Ly lớn (lớn gấp đôi ly nhỏ): 30k Bạn sẽ chọn size nào ?</description>
     </item>
     
-    <item>
-      <title>My First Post</title>
-      <link>https://minhduc2803.github.io/my-first-post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://minhduc2803.github.io/my-first-post/</guid>
-      <description>##Introduction
-This is a introduction</description>
-    </item>
-    
-    <item>
-      <title>My Second Post</title>
-      <link>https://minhduc2803.github.io/my-second-post/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://minhduc2803.github.io/my-second-post/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
