@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+        
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:image" content="/post/image/concurrency-vs-parallelism/thumb-nail.jpg"/>
+    
+
+
+
+<meta name="twitter:title" content="Concurrency vs. Parallelism"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@"/>
+
+
+
+  	<meta property="og:title" content="Concurrency vs. Parallelism &middot; Minh Duc" />
+  	<meta property="og:site_name" content="Minh Duc" />
+  	<meta property="og:url" content="https://minhduc2803.github.io/concurrency-vs-parallelism/" />
+
+    
+       <meta property="og:image" content="/post/image/concurrency-vs-parallelism/thumb-nail.jpg"/>
+    
+
+    
+    <meta property="og:description" content="" />
+  	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-08-04T01:51:24&#43;07:00" />
+
+    
+    
+
+    <title>Concurrency vs. Parallelism &middot; Minh Duc</title>
+
+    
+    <meta name="description" content="&amp;ldquo;Concurrency is not Parallelism&amp;rdquo; là điều mà chúng ta sẽ làm rõ trong bài viết này.
+Bạn không nghe nhầm đâu, &amp;ldquo;Concurrency is not Parallelism&amp;rd" />
+    
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/css/nav.css" />
+
+    
+
+    
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+      
+          <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Minh Duc" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.74.2" />
+
+    <link rel="canonical" href="https://minhduc2803.github.io/concurrency-vs-parallelism/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name":  null ,
+        "logo": "https://minhduc2803.github.io/images/logo.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name":  null ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://minhduc2803.github.io/images/logo.png",
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url":  null ,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": "A Software Development Fresher"
+        
+    },
+    "headline": "Concurrency vs. Parallelism",
+    "name": "Concurrency vs. Parallelism",
+    "wordCount":  603 ,
+    "timeRequired": "PT3M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": "en"
+    },
+    "url": "https://minhduc2803.github.io/concurrency-vs-parallelism/",
+    "datePublished": "2020-08-04T01:51Z",
+    "dateModified": "2020-08-04T01:51Z",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://minhduc2803.github.io/post/image/concurrency-vs-parallelism/thumb-nail.jpg",
+        "width": 3000,
+        "height": 1445
+    },
+    
+    
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://minhduc2803.github.io/concurrency-vs-parallelism/"
+    }
+}
+    </script>
+    
+
+
+    
+
+    
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+            
+            <li class="nav-opened" role="presentation">
+            	<a href="/">Blog</a>
+            </li>
+        
+        
+    </ul>
+
+    
+    <a class="subscribe-button icon-feed" href="/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+  
+  <header class="main-header post-head" style="background-image: url(/post/image/concurrency-vs-parallelism/thumb-nail.jpg)">
+  
+  <nav class="main-nav overlay clearfix">
+
+
+  
+      <a class="blog-logo" href="https://minhduc2803.github.io/"><img src="/images/logo.png" alt="Home" /></a>
+  
+  
+      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Concurrency vs. Parallelism</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2020-08-04T01:51:24&#43;07:00">
+            Aug 4, 2020
+          </time>
+        
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>&ldquo;Concurrency is not Parallelism&rdquo; là điều mà chúng ta sẽ làm rõ trong bài viết này.</p>
+<p>Bạn không nghe nhầm đâu, &ldquo;Concurrency is not Parallelism&rdquo;. Nhiều việc diễn ra &ldquo;đồng thời&rdquo; không nhất thiết phải diễn ra &ldquo;song song&rdquo; với nhau. Để làm rõ điều này có lẽ tôi phải giới thiệu thêm một thuật ngữ nữa, &ldquo;simultaneous&rdquo;.</p>
+<h3 id="concurrency-vs-simultaneously">Concurrency vs. Simultaneously</h3>
+<p>Cả hai từ trên khi dịch ra tiếng việt đều mang nghĩa là &ldquo;đồng thời&rdquo;, trong tiếng anh cũng đều có nghĩa là &ldquo;occurring at the same time&rdquo;. Nhưng thực sự 2 từ này có chút khác biệt, &ldquo;Concurrency&rdquo; dùng để nói tới các sự kiện diễn ra trong &ldquo;một khoảng thời gian&rdquo; còn &ldquo;Simultaneous&rdquo; mô tả các sự kiện diễn ra trong cùng &ldquo;một thời điểm&rdquo;.</p>
+<p>Hai khái niệm sẽ rõ ràng hơn trong technology. Khi hệ điều hành đa nhiệm ra đời, CPU vẫn chỉ có một core nhưng vẫn có thể xử lý nhiều thread &ldquo;concurrently&rdquo;, người dùng có thể vừa chơi game vừa lướt web mà không hề bị gián đoạn. Sự đồng thời này là &ldquo;Concurrency&rdquo;, tức là trong một khoảng thời gian (vài giây chẳng hạn) web và game đều được CPU xử lý, nhưng không &ldquo;Simultaneous&rdquo;, vì trong một thời điểm nhất định, CPU chỉ xử lý một thread nhất định, rồi sau đó rất nhanh luân phiên chuyển qua xử lý thread khác, được điều khiển bởi bộ định thời của hệ điều hành. Ví dụ như CPU điều khiển game trong 0.01s sau đó dừng, xử lý web 0.01s, rồi lại dừng, chuyển qua hiển thị game trong 0.01s,&hellip; Khiến cho trong một khoảng thời gian vài giây, 2 task game và web diễn ra đồng thời với nhau. Vì sự chuyển đổi của CPU diễn ra quá nhanh, nên việc hiển thị trở nên quá mượt mà khiến người dùng dễ lầm tưởng web và game chạy &ldquo;song song&rdquo; với nhau.</p>
+<h3 id="concurrency-is-not-parallelism">Concurrency is not Parallelism</h3>
+<pre><code>Nói như vậy không có nghĩa rằng mọi thứ song song thì không đồng thời, chỉ là điều ngược lại chưa chắc đã đúng.
+</code></pre>
+<p><img src="/post/image/concurrency-vs-parallelism/concurrency-vs-parallelism.png" alt="concurrency-vs-parallelism"></p>
+<p>Những sự kiện kiện diễn ra &ldquo;parallel&rdquo; khi chúng &ldquo;simultaneously&rdquo;. Tức tại một thời điểm phải có ít nhất 2 sự kiện cùng diễn ra. Như vậy với hệ điều hành đa nhiệm 1 CPU one core, web và game không chạy &ldquo;song song&rdquo; với nhau. Nhưng chúng ta vẫn coi như chúng chạy &ldquo;Concurrently&rdquo;. Muốn có &ldquo;Parallelism&rdquo; có lẽ chúng ta cần ít nhất 2 CPU hoặc 1 CPU 2 core. Như vậy 2 CPU có thể xử lý 2 task cùng một lúc, ý tôi là &ldquo;Simultaneously&rdquo;.</p>
+<p>Giống như ví dụ với hệ điều hành đa nhiệm ở trên, tượng tượng 2 chuỗi task công việc cho web và game là 2 hàng người đợi mua coffee, còn CPU là máy pha coffee.</p>
+<p><img src="/post/image/concurrency-vs-parallelism/coffee.png" alt="coffee-line"></p>
+<p>Nếu chỉ có một máy pha coffee thì chắc chắn tại một thời điểm chỉ một người được phục vụ, máy pha coffee sẽ luân phiên phục vụ từng người của mỗi hàng đợi, vậy cả 2 hàng người đều được phụ cùng một lúc =&gt; concurrency but not parallelism.</p>
+<p>Còn nếu có 2 máy pha coffee, easy, mỗi máy sẽ phục vụ riêng một hàng người, tại một thời điểm sẽ có thể có 2 người được phục vụ =&gt; concurrency and parallelism</p>
+<p>Yeah, kết luận là &ldquo;concurrently is not parallelism&rdquo;. Một khái niệm mới mà cũ. Hi vọng bài viết ngắn này có thể làm rõ hơn khái niệm &ldquo;concurrency&rdquo;  và &ldquo;parallelism&rdquo;, cùng với đó là &ldquo;simultaneous&rdquo; cho bạn đọc.</p>
+<p>And now, thanks for reading ^^</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+
+
+
+
+
+
+
+
+<figure class="author-image">
+    <a class="img" href="https://minhduc2803.github.io/" style="background-image: url(/images/logo.png)"><span class="hidden">Minh Duc's Picture</span></a>
+</figure>
+
+
+<section class="author">
+  <h4><a href="https://minhduc2803.github.io/">Minh Duc</a></h4>
+  
+  <p>A Software Development Fresher</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Ho Chi Minh, Viet Nam</span>
+    
+  </div>
+</section>
+
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Concurrency%20vs.%20Parallelism&nbsp;-&nbsp;Minh%20Duc&amp;url=https%3a%2f%2fminhduc2803.github.io%2fconcurrency-vs-parallelism%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fminhduc2803.github.io%2fconcurrency-vs-parallelism%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fminhduc2803.github.io%2fconcurrency-vs-parallelism%2f&amp;description=Concurrency%20vs.%20Parallelism"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=https%3a%2f%2fminhduc2803.github.io%2fconcurrency-vs-parallelism%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+
+
+
+  </footer>
+</article>
+
+</main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="background-image: url(/post/image/raw.png)" href="/thinink-fast-and-slow/">
+          <section class="post">
+              <h2>Bạn đã suy nghĩ kỹ chưa ?</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">Minh Duc</a> @ VNG Fresher 2020</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+    
+</body>
+</html>
+

@@ -13,12 +13,14 @@
     
     
     <item>
-      <title>Concurrency vs. Parallel</title>
-      <link>https://minhduc2803.github.io/concurrency-vs-parallel/</link>
+      <title>Concurrency vs. Parallelism</title>
+      <link>https://minhduc2803.github.io/concurrency-vs-parallelism/</link>
       <pubDate>Tue, 04 Aug 2020 01:51:24 +0700</pubDate>
       
-      <guid>https://minhduc2803.github.io/concurrency-vs-parallel/</guid>
-      <description></description>
+      <guid>https://minhduc2803.github.io/concurrency-vs-parallelism/</guid>
+      <description>&amp;ldquo;Concurrency is not Parallelism&amp;rdquo; là điều mà chúng ta sẽ làm rõ trong bài viết này.
+Bạn không nghe nhầm đâu, &amp;ldquo;Concurrency is not Parallelism&amp;rdquo;. Nhiều việc diễn ra &amp;ldquo;đồng thời&amp;rdquo; không nhất thiết phải diễn ra &amp;ldquo;song song&amp;rdquo; với nhau. Để làm rõ điều này có lẽ tôi phải giới thiệu thêm một thuật ngữ nữa, &amp;ldquo;simultaneous&amp;rdquo;.
+Concurrency vs. Simultaneously Cả hai từ trên khi dịch ra tiếng việt đều mang nghĩa là &amp;ldquo;đồng thời&amp;rdquo;, trong tiếng anh cũng đều có nghĩa là &amp;ldquo;occurring at the same time&amp;rdquo;.</description>
     </item>
     
     <item>
